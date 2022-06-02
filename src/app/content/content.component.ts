@@ -30,7 +30,6 @@ export class ContentComponent implements OnInit {
       })
       .subscribe((response) => {
         this.response = response
-        console.log(response)
         toggle ? this.value2 = this.response.result : this.value1 = this.response.result
       })
   }

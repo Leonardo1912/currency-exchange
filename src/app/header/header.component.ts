@@ -7,9 +7,9 @@ import {HttpClient} from "@angular/common/http";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  @Input() search: Function
+  @Input() exchange: Function
   constructor(private http: HttpClient) {
-    this.search = () => {}
+    this.exchange = () => {}
   }
 
   eur: number = 0
@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.search()
+    this.exchange()
   }
 
 }

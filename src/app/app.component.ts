@@ -7,12 +7,13 @@ import {HttpClient} from "@angular/common/http";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  title: string = "exchanger";
   constructor(private http: HttpClient) {
   }
   response: any
   eur: number = 0
   usd: number = 0
-  search() {
+  exchange() {
     this.http.get('https://api.apilayer.com/currency_data/convert?to=UAH&from=EUR&amount=1&apikey=9DwKIEL15Cp6lsiLUK9taSgAbM9MG67X')
       .subscribe((response) => {
         this.response = response
