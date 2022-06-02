@@ -1,0 +1,21 @@
+<div class="content">
+  <div class="currency">
+    <input type="number" [value]="value1" [(ngModel)]="value1">
+    <select [(ngModel)]="currency1">
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+      <option value="UAH">UAH</option>
+    </select>
+    <button (click)="click(true, value1, currency1, currency2)">Exchange</button>
+  </div>
+  <div class="currency">
+    <input type="number" [value]="value2" [(ngModel)]="value2">
+    <select [(ngModel)]="currency2">
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+      <option value="UAH">UAH</option>
+    </select>
+    <button (click)="click(false, value2, currency1, currency2)">Exchange</button>
+  </div>
+  <div class="error" [ngStyle]="{display: error ?'block':'none'}">Error</div>
+</div>
